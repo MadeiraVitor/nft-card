@@ -1,0 +1,143 @@
+body {
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    background-color: var(--neutral-color-dark);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--neutral-color-medium);
+    width: 350px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.card .image-link {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    height: 300px;
+    
+}
+
+.card .image-link::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 255, 247, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card .image-link:hover::before {
+    opacity: 1;
+}
+
+.card .image-link::after {
+    content: url(../images/icon-view.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card .image-link:hover::after {
+    opacity: 1;
+}
+
+.card .image-link .image-equilibrium {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+
+.card .link-titulo {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card .link-titulo:hover {
+    color: var(--primary-color-medium);
+    transition: 0.3s ease-in-out;
+}
+
+.card .description {
+    color: var(--primary-color-soft);
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.card .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.card .about .price::before {
+    content: url(../images/icon-ethereum.svg);
+    margin-right: 7px;
+    margin-top: 4px;
+}
+
+.card .about .price {
+    color: var(--primary-color-medium);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.card .about .days-left::before {
+    content: url(../images/icon-clock.svg);
+    margin-right: 7px;
+    margin-top: 4px;
+}
+
+.card .about .days-left {
+    color: var(--primary-color-soft);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.card .creator {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--neutral-color-soft);
+    margin-top: 25px;
+    padding-top: 15px;
+}
+
+.card .creator .image-creator {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 15px;
+}
+
+.card .creator .name-creator {
+    color: var(--primary-color-soft);
+}
+
+.card .creator .name-creator .link-name-creator {
+    color: white;
+}
+
+.card .creator .name-creator .link-name-creator:hover {
+    color: var(--primary-color-medium);
+    transition: 0.3s ease-in-out;
+}
